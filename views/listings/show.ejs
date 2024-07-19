@@ -1,0 +1,129 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<script>
+    const mapToken = "<%= process.env.MAP_TOKEN %>";
+    const Listing = <%- JSON.stringify(Listing) %>;
+</script>
+
+
+
+<div class="show-row offset-4">
+    <body>
+    
+        <h1 class="card-title"><%= Listing.title %></h1>
+        <br>
+
+        <div class="showcard" style="width: 18rem;">
+            <img src="<%= Listing.image_url.url %>" class="card-img-top" alt="listing_image">
+            <br>    <br> 
+                <div class="showbody">
+                    <p>Owner : <i> <%= Listing.owner.username%> </i></p>
+                    <p class="card-text"><%= Listing.desc %></p>
+                    <p class="card-text"> Price : &#8377 <%= Listing.price.toLocaleString("en-IN") %></p>
+                    <p class="card-text">Location : <%= Listing.location %></p>
+                    <p class="card-text">Country : <%= Listing.country %></p>
+
+                            <% if(currUser && currUser._id.equals(Listing.owner._id)) {%>
+                                <a href="/listings/<%=Listing.id%>/edit" class="btn btn-primary"> Edit the information</a>
+                            <% } %>
+                </div>
+        </div>
+        
+        <br><br>
+        <% if(currUser && currUser._id.equals(Listing.owner._id)) {%>
+                <form method="post" action="/listings/<%=Listing.id%>?_method=Delete">
+                    <button class="del">Delete this!!</button>
+                </form>
+       <% } %>        
+        <br>    
+    </body>
+</div>
+
+<hr style="border: 2px solid black;">
+
+
+<!-- ********REVIEW******* -->
+<div class="show-row offset-4">
+    <h4>Leave a Review</h4>
+
+    <!-- STARABILITY CSS -->
+    <fieldset class="starability-heartbeat">
+        <!-- <legend>First rating:</legend> -->
+        <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+        <input type="radio" id="first-rate1" name="rating" value="1" />
+        <label for="first-rate1" title="Terrible">1 star</label>
+        <input type="radio" id="first-rate2" name="rating" value="2" />
+        <label for="first-rate2" title="Not good">2 stars</label>
+        <input type="radio" id="first-rate3" name="rating" value="3" />
+        <label for="first-rate3" title="Average">3 stars</label>
+        <input type="radio" id="first-rate4" name="rating" value="4" />
+        <label for="first-rate4" title="Very good">4 stars</label>
+        <input type="radio" id="first-rate5" name="rating" value="5" />
+        <label for="first-rate5" title="Amazing">5 stars</label>
+      </fieldset>
+
+      <!-- <br> -->
+
+
+
+
+
+    <form action="/listings/<%=Listing.id%>/reviews" method="POST" novalidate class="needs-validation">
+            
+        
+        <!-- <div style="background: linear-gradient(to left , rgb(72, 253, 72) ,rgb(245, 245, 54), rgb(248, 36, 36)); width: 24%; border: 2px solid black; border-radius: 8px; font-size: 19px;">
+                <label for="rating" style="padding-left: 5px;">
+                    <input type="radio" id="rating" name="review[rating]" value="1"> 1
+                </label>
+                <label for="rating">
+                    <input type="radio" id="rating" name="review[rating]" value="2"> 2
+                </label>
+                <label for="rating">
+                    <input type="radio" id="rating" name="review[rating]" value="3"> 3
+                </label>
+                <label for="rating">
+                    <input type="radio" id="rating" name="review[rating]" value="4"> 4
+                </label>
+                <label for="rating">
+                    <input type="radio" id="rating" name="review[rating]" value="5"> 5
+                </label>
+        </div> -->
+
+            <div >
+                <label for="comment">comment</label>
+                <br>
+                <textarea name="review[comment]" id="comment" cols="60" rows="3" required></textarea>
+                <div class="invalid-feedback">BHEN KA LUN AUTAT ME , PHELA UPAR WALE DIBBA MA KUCH LIKH </div>
+                <div class="valid-feedback">Sherrrrr....</div>
+            </div>
+            <br>
+            <button class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    
+    
+    
+</div>
+
+<hr style="border: 2px solid black; width: 100%;">
+<div class="show-row offset-4">
+    <!-- <h4>All Reviews</h4> -->
+    <ul>
+        <% for(review of Listing.reviews){ %>
+            <li><%=review.comment%> , <%=review.rating%></li>
+            <!-- STAR -->
+            <p class="starability-result" data-rating="<%=review.rating%>">
+                Rated: 3 stars
+            </p>
+        <%}%>
+    </ul>
+</div>
+
+<div class="show-row offset-4">
+    <h3>Destination</h3>
+</div>
+
+<div id="map" ></div>
+
+<script src="/js/map.js"></script>
+

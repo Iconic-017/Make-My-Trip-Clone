@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <h1>Edit your Listing</h1>
+    <form method="post" action="/listings/<%= Listing.id %>?_method=PUT" class="col-8" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" value="<%= Listing.title %>" type="text" class="form-control">
+        </div>
+        
+        <br><br>
+
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[desc]" class="form-control"><%= Listing.desc %></textarea>
+        </div>
+
+        <br><br>
+
+        <div class="mb-3">
+            <img src="<%= originalImageUrl %>" />
+        </div>
+
+
+
+        <div>
+            <label for="image" class="form-label">Upload New Image</label>
+            <input name="listing[image]" type="file" class="form-control">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" value="<%= Listing.price %>" class="form-control">
+        </div>
+        <br><br>
+        <div>
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" value="<%= Listing.country %>" class="form-control">
+        </div>
+        <br><br>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" value="<%= Listing.location %>" class="form-control">
+        </div>
+        <br><br>
+        <button class="new-btn">Edit Successfully!</button>
+    </form>
+    <br>
+</body>

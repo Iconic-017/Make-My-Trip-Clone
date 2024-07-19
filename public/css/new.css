@@ -1,0 +1,184 @@
+.spacer{
+    height: 23.7rem;
+}
+
+
+.navbar{
+    background-color: rgb(55, 53, 55)
+}
+
+.navbar-nav a{
+    color: white !important;
+    padding-top: 25px;
+    margin: 0 0 0 30px;
+
+}
+
+.navbar-nav img{
+    margin: 0 25px 0 30px
+}
+
+
+.footer-info{
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgb(163, 163, 163);
+}
+
+.f-social {
+    width: 100%;
+   font-size: 20px;
+   justify-content:space-between;
+   text-align: center;
+}
+
+.f-social I {
+    margin-right: 1.5rem;
+}
+
+.flinks a{
+    text-decoration: none;
+    color: rgb(0, 4, 255);
+}
+
+.flinks a:hover {
+    text-decoration: underline crimson ;
+    color: coral;
+}
+
+.company{
+    padding:10px 0 10px 0 ;
+    font-weight: 500;
+    color: #EB2226;
+}
+
+
+
+.company:hover{
+    color: black;
+    /* font-size: 25px; */
+}
+
+.card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+
+.card img{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100% !important;
+    object-fit: cover;
+    transition: transform 0.5s ease !important;
+}
+
+.card img:hover{
+    transform: scale(1.1) !important;
+    z-index: 99;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 800 !important;
+}
+
+.btn:hover{
+    background-color: yellow !important;
+    color: #EB2226 !important;
+}
+
+.new-btn{
+    margin-bottom: 15px;
+    /* border: none; */
+}
+
+.new-btn:hover{
+    background-color: #2f9a3b;
+    color: white;
+}
+
+.showcard img{
+    border-radius: 15px;
+    height: 400px;
+    width: 400px;
+}
+
+.del{
+    background-color: rgb(240, 6, 6);
+    color:white;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    margin-top: -10px;
+}
+
+.del:hover{
+    background-color: rgb(171, 4, 4);
+}
+
+
+
+#map{
+    height: 500px;
+    width: 800px;
+    text-align: center;
+    justify-content: center;
+    margin: 0px 0px 50px 100px;
+    border-radius: 15px;
+}
+
+
+
+
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    font-size:20px;
+    margin-left: 5rem;
+    transition: transform1 0.5s ease
+}
+
+.filters{
+    text-align: center;
+    align-items: center;
+    margin-right: 7rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+#filters :hover{
+    opacity: 1;
+    color: #EB2226;
+    transform: scale(1.1);
+}
+
+.tax-info{
+    display: none;
+}
+
+.tax-toggle{
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-srch{
+    border-radius: 25px;
+    background-color: #EB2226;
+    color: white;
+    width: 7rem;
+}
+
+.btn-srch:hover { 
+    background-color: #198754;
+}
+
+.srch{
+    border-radius: 20px !important;
+}

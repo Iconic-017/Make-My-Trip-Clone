@@ -10,8 +10,8 @@ module.exports.GetSignUp = (req, res) => {
 module.exports.PostSignUp = async (req, res, next) => {
     try {
         const { username, email, password } = req.body;
-        const newUser = new User({ email, username });
-        const registeredUser = await User.register(newUser, password);
+        const newUser = new user({ email, username });
+        const registeredUser = await user.register(newUser, password);
         req.login(registeredUser, (err) => {
             if (err) return next(err);
             req.flash("success", "Welcome to the Kanto region");

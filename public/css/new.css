@@ -19,21 +19,33 @@
 }
 
 
+
+
+
+
+
 .footer-info{
+    display: flex;
+    height: 8rem;
+    background-color: rgb(163, 163, 163);
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: space-evenly;
     text-align: center;
     padding-top: 50px;
-    background-color: rgb(163, 163, 163);
 }
 
-.f-social {
+.f-social .flinks {
     width: 100%;
-   font-size: 20px;
-   justify-content:space-between;
-   text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    /* justify-content:space-between;
+    text-align: center; */
 }
 
 .f-social I {
+    font-size: 1.2rem;
     margin-right: 1.5rem;
 }
 
@@ -47,9 +59,21 @@
     color: coral;
 }
 
+
+
+
+
+
+
+
+
 .company{
-    padding:10px 0 10px 0 ;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* padding:10px 0 10px 0 ; */
+    font-weight: 400;
     color: #EB2226;
 }
 
@@ -57,7 +81,6 @@
 
 .company:hover{
     color: black;
-    /* font-size: 25px; */
 }
 
 .card{

@@ -184,6 +184,7 @@
 }
 
 .editImg img {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
 }

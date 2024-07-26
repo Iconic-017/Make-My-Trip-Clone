@@ -127,32 +127,3 @@
 
 <script src="/js/map.js"></script>
 
-
-<div id="filters">
-    <div class="filters"><div><i class="fa-solid fa-plane"></i><p>Flights</p></div></div>
-    <div class="filters"><div><i class="fa-solid fa-hotel"></i><p>Hotls</p></div></div>
-    <div class="filters"><div><i class="fa-solid fa-train"></i><p>Trains</p></div></div>
-    <div class="filters"><div><i class="fa-solid fa-taxi"></i><p>Cabs</p></div></div>
-    <div class="filters"><div><i class="fa-solid fa-bus"></i><p>Bus</p></div></div>
-    <div class="filters"><div><i class="fa-brands fa-cc-visa"></i><p>visa</p></div></div>
-    <div class="filters"><div><i class="fa-solid fa-wallet"></i><p>Currency</p></div></div>
-    
-    <div class="tax-toggle">
-      <div class="form-check-reverse form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Show Tax</label>
-      </div>
-    </div>
-  
-  </div>
-  
-  <script>
-    let taxswitch = document.getElementById("flexSwitchCheckDefault")
-    taxswitch.addEventListener("click" , () =>{
-      let taxinfo = document.getElementsByClassName("tax-info");
-      for(info of taxinfo){
-        if(info.style.display!= "inline") info.style.display = "inline";
-        else info.style.display = "none";
-      }
-    })
-  </script>

@@ -182,3 +182,8 @@
 .srch{
     border-radius: 20px !important;
 }
+
+.editImg img {
+    width: 100px;
+    height: 100px;
+}

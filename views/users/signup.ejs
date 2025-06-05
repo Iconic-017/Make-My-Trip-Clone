@@ -3,33 +3,31 @@
 <div class="row">
     <div class="col-5 offset-4">
 
-        <form action="/signup"  method="post" novalidate class="needs-validation">
-
+        <form action="/signup" method="post" novalidate class="needs-validation">
 
             <div>
-                <label for="username" class="form-label">username</label>
-                <input name="username"  id="username" type="text" class="form-control" required>
-                </input>
-                <div class="invalid-feedback">BHEN KA LUN AUTAT ME </div>
-                <div class="valid-feedback">Sherrrrr....</div>
+                <label for="username" class="form-label">Username</label>
+                <input name="username" id="username" type="text" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid username.</div>
+                <div class="valid-feedback">Looks good!</div>
             </div>
 
             <div>
-                <label for="email" class="form-label">email</label>
-                <input name="email"  id="email" type="email" class="form-control" required>
-                </input>
-                <div class="invalid-feedback">BHEN KA LUN AUTAT ME </div>
-                <div class="valid-feedback">Sherrrrr....</div>
+                <label for="email" class="form-label">Email</label>
+                <input name="email" id="email" type="email" class="form-control" required>
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+                <div class="valid-feedback">Looks good!</div>
             </div>
-
 
             <div>
-                <label for="password" class="form-label">password</label>
-                <input name="password"  id="password" type="password" class="form-control" required>
-                </input>
+                <label for="password" class="form-label">Password</label>
+                <input name="password" id="password" type="password" class="form-control" required>
+                <div class="invalid-feedback">Please enter a password.</div>
+                <div class="valid-feedback">Password accepted.</div>
             </div>
+
             <br>
-            <button class="btn btn-success">SignUp</button>
+            <button class="btn btn-success" type="submit">Sign Up</button>
         </form>
         <div style="margin-top: 179px;"></div>
     </div>

@@ -7,6 +7,7 @@ const multer = require('multer');
 const { storage } = require("../CloudConfig.js");
 const upload = multer({ storage });
 
+// now working
 const listingController = require("../controllers/listing.js");
 
 router.route("/new")
